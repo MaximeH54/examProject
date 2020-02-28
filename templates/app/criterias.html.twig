@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Partie Quizz{% endblock %}
+{% block title %}Partie Candidats/Critères{% endblock %}
 
 {% block body %}
 <style>
@@ -8,11 +8,10 @@
     body { background: #F5F5F5; }
 </style>
 <div class="example-wrapper">
-    <h1>Quizz à compléter ✅</h1><br>
-	{% for quiz in quizz %}
-			 <li><a href="{{ path('students', {
-			 			quizId: quiz.id
-			 }) }}">{{ quiz.name }}</li>
+    <h1>Nom du Quizz : </h1><br>
+		<h2>Nom du Candidat : </h2><br>
+	{% for criteria in criterias %}
+			 <li><a href="">{{ quiz.name }}</li>
 	 {% endfor %}
 
 {% endblock %}

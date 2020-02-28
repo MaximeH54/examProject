@@ -8,9 +8,12 @@
     body { background: #F5F5F5; }
 </style>
 <div class="example-wrapper">
-    <h1>Liste des Candidats ✅</h1><br>
+     <h1>Quizz selectionné : {{ quiz.name }}</h1>
+	<div class="example-wrapper">
+	    <h2>Liste des Candidats ✅</h2>
 	{% for student in students %}
-			 <li><a href="{{ path('students') }}">{{ student.fullname|e }}</a></li>
+			 <li><a href="{{ path('criterias', {studentsId: student.id}) }}">{{ student.fullname }}</li>
+
 	{% endfor %}
 
 {% endblock %}
